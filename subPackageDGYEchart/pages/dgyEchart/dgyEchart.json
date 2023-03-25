@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "ec-canvas": "../../../ec-canvas/ec-canvas"
+  },
+  "navigationBarTitleText": "门店&导购员统计",
+  "navigationBarBackgroundColor": "#1d1e25",
+  "navigationBarTextStyle": "white"
+}

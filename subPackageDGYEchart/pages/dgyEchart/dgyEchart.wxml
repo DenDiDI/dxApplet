@@ -1,0 +1,43 @@
+<view class="container"> 
+  <view class="chart2-content dgy-chart2-content">
+    <view class="chart-header">
+      门店合作率
+    </view>
+    <view class="pie-box">
+      <view class="pie-content"  wx:if="{{echart1Show}}">
+        <ec-canvas id="dgy-echart1" canvas-id="mychart-bar1" ec="{{ec2}}" force-use-old-canvas="true"></ec-canvas>
+      </view>
+      <view class="pie-content noDataTxt" wx:else>暂无数据</view>
+      <view class="pie-msg">
+        <view>达成合作门店数（家）</view>
+        <span>{{shopData.enableCount}}</span>
+        <view>门店总数（家）</view>
+        <span>{{shopData.shopCount}}</span>
+        <view>本月新增合作门店数（家）</view>
+        <span>{{shopData.newAddCount}}</span>
+        <span>{{shopData.newAddRadio}}%</span>
+      </view>
+    </view>
+   
+  </view>
+  <view class="chart2-content dgy-chart2-content">
+    <view class="chart-header">
+      导购员使用率
+    </view>
+    <view class="pie-box">
+      <view class="pie-content" wx:if="{{echart2Show}}">
+        <ec-canvas id="dgy-echart2" canvas-id="mychart-bar2" ec="{{ec2}}" force-use-old-canvas="true"></ec-canvas>
+      </view>
+      <view class="pie-content noDataTxt" wx:else>暂无数据</view>
+      <view class="pie-msg">
+        <view>导购员总数（人）</view>
+        <span>{{salesData.saleCount}}</span>
+        <view>软件使用人数（人）</view>
+        <span>{{salesData.useCount}}</span>
+        <view>本月新增人数（人）</view>
+        <span>{{salesData.newAddCount}}</span>
+        <span>{{salesData.newAddRadio}}%</span>
+      </view>
+    </view>
+  </view>
+</view>

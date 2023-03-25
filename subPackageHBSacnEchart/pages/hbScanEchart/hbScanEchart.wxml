@@ -1,0 +1,63 @@
+
+<view class="contanier">
+  <date-sel-temp dateData="{{dateData}}" binditemChange="handleDateChange"></date-sel-temp>
+  <!-- 第一个柱状图 -->
+  <view class="chart-content">
+  <view class="chart-header">
+    <view>门店扫码金额统计</view>
+  </view>
+  <view class="chart2-content sp-chart">
+    <view class="sp-chart1-btn">
+      <view class="sp-saleAndScanSel" bindtap="getScanNum">
+      <view class="sp-saleNum sp-Num"></view>
+        红包金额
+      </view>
+      <view class="sp-saleAndScanSel" bindtap="getSaleNum"> 
+        <view class="sp-scanNum sp-Num"></view>
+        销售金额
+        </view>
+    </view>
+    <view class="chart-bar-box" wx:if="{{chartFlg1}}">
+    <view class="chart-bar-item" wx:for="{{chartData}}" wx:for-index="i">
+    <view class="chart-bar-item-index">{{i+1}}</view>
+    <view class="chart-bar-item-barbox">
+      <view>{{item.shopName}}</view>
+      <view class="chart-bar-item-barbox-bar">
+        <view class="chart-bar-item-barbox-abar" style="width:{{item.numLen}};background-color:{{item.color}}"></view>
+      </view>
+    </view>
+    <view>{{item.num}}</view>
+    </view>
+    </view>
+    <view class="chart2 noDataTxt" wx:else>暂无数据</view>
+  </view>
+  </view>
+  <!-- 第二个饼图 -->
+  <view class="chart2-content">
+    <view class="sp-chart2-content">
+    <view class="chart-header">
+      <view>扫码商品占比（显示前5项）</view>
+      <view class="chartShowTxt" bindtap="showPopup">{{selShopTxt}}</view>
+    </view>
+      <view class="chart2" wx:if="{{echart2Show}}">
+        <ec-canvas force-use-old-canvas="true" id="hbScan-echart2" canvas-id="mychart-bar2" ec="{{ec2}}" force-use-old-canvas="true"></ec-canvas>
+      </view>
+      <view class="chart2 noDataTxt" wx:else>暂无数据</view>
+    </view>
+  </view>
+  <van-popup show="{{showShop}}" bind:close="closeShopList">
+  <view class="selbanner">
+    <view style="display:flex;justify-content: space-around;">
+      <van-search value="{{ inpShopValue }}" placeholder="请输入门店关键词" bind:change="getSearchList"/>
+      <van-icon name="cross" bindtap="closeShopList"/>
+    </view>
+   
+    <view style="width:100%;display:flex;flex-direction: column;">
+      <view wx:for="{{searchData}}"  style="min-height: 30px;padding-left:20rpx;font-size:30rpx;border-bottom:1px solid rgba(177, 177, 177, 0.1);margin-bottom:20rpx;">
+        <view bindtap="getSelectVal" data-id="{{item.shopId}}">{{item.shopName}}</view>
+      </view>
+    </view>
+  </view>
+</van-popup>
+
+</view>

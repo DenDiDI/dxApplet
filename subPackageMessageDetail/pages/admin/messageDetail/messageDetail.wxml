@@ -1,0 +1,18 @@
+<!--pages/admin/messageDetail/messageDetail.wxml-->
+<view class="container">
+  <view class="list-content">
+    <view class="list-title">
+      充值记录
+    </view>
+    <view class="line"></view>
+    <view class="a-task-msg-detail-content">
+      <view>
+        您在2022.10.26 19:07:59充值了
+        10,000元，目前账户余额为11,324元。
+      </view>
+      <view class="a-task-msg-detail-time">
+        2022-10-12
+      </view>
+    </view>
+  </view>
+</view>

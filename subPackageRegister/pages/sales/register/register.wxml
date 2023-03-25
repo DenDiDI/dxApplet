@@ -1,0 +1,84 @@
+<!--pages/sales/register/register.wxml-->
+<view class="container">
+  <view class="registerContent">
+  <view class="require">
+  <input value="{{registerName}}" type="value" bindblur="inputRegisterName" placeholder-class="mplacehodlerClass"  placeholder="请输入姓名"/>
+  </view> 
+  <view class="cellRight" class="require">
+
+    <input value="{{registerPhone}}" type="value" style="width: 400rpx;color:#131415" bindinput="inputRegisterPhone" placeholder-class="mplacehodlerClass" placeholder="请输入手机号"/>
+    <view class="cellRightSpan getCodeBtn"  bindtap="getRegisterCode">{{getCodeTxt}}
+    </view>
+  </view>
+  <view class="require">
+  <input value="{{registerCode}}" type="value" bindblur="inputRegisterCode" placeholder-class="mplacehodlerClass" placeholder="请输入验证码"/>
+  </view>   
+  <view class="require">
+  <input value="{{registerIdNumber}}" type="value" bindblur="inputRegisterIdNumber" placeholder-class="mplacehodlerClass" placeholder="请输入身份证号"/>
+</view>
+<view>
+  <input value="{{registerWeChat}}" type="value" bindblur="inputRegisterWeChat" placeholder-class="mplacehodlerClass" placeholder="请输入微信号"/>
+</view>
+<view class="require">
+  <input value="{{registerBusinessVal}}" type="value" bindinput="inputBusinessVal" placeholder-class="mplacehodlerClass" placeholder="请输入代理商代码"/>
+</view>
+   
+
+ <!-- 选择门店 -->
+ <view class="select-box require" bindtap="bindPickerShopChange">
+    <view class="selShop" >{{shopV}}</view>
+    <span class="select-box-span s-color">
+      <van-icon name="arrow"/>
+    </span>
+</view>
+<view>
+  <input value="{{registerRemarks}}"  type="value" bindblur="inputRegisterRemarks" placeholder-class="mplacehodlerClass" placeholder="请输入备注"/>
+</view>
+  <view class="registerAgree">
+    <checkbox bindtap="onChangeChecked"></checkbox>
+    <view class="registerAgressTxt">
+    同意
+    <span bindtap="getAgreeTxt">《网络服务使用协议》</span>
+    </view>
+  </view>
+ 
+</view>
+<button bindtap="register" disabled="{{loadingFlg}}" class="registerConfrim ">注册</button>
+<van-overlay show="{{ show }}">
+  <view class="wrapper">
+    <view class="block">
+    <scroll-view scroll-y="true" style="height: 900rpx;">
+      <view class="headerTxt">用户服务协议和隐私政策</view>
+      <view>
+    <view class="txtP">在注册前请您务必认真阅读本协议的内容、充分理解各条款内容，如有异议，您可选择不在本平台注册。一旦您确认本用户注册协议后，本协议即在您和本平台之间产生法律效力，意味着您完全同意并接受协议的全部条款。请您审慎阅读并选择接受或不接受协议。
+    </view>
+    <view class="txtP">1、用户使用：</view>
+    <view class="txtP">1.1用户按照页面给与的提示完成全部注册步骤即成为本平台的用户，用户应自行保管账号及密码，并准确、安全地使用其账号及密码。因用户未妥善保管账号密码等自身原因导致的一切风险，由用户自行承担。
+    </view>
+    <view class="txtP">
+    1.2用户注册时须填写真实姓名、手机号码、身份证号码，正确选择门店及所在位置，如因用户填写注册资料有误导致后续操作失败，由用户自行承担后果。</view>
+    <view class="txtP">1.3用户提供的个人信息或发布的信息不真实、不准确、不合法，发表内容不符合法律法规的，本平台有权暂停或终止用户使用本平台的服务，且由用户自行承担由此带来的一切法律责任，本平台不承担任何连带法律责任。</view>
+    <view class="txtP">2、隐私政策</view>
+    <view class="txtP">2.1本协议所指个人信息，是您在注册本应用帐号时，您根据本平台要求提供的个人注册信息。</view>
+    <view class="txtP">2.2本平台尊重并保护所有用户的个人隐私权，导购员注册时填写的身份证信息只用于个人所得税申报，不作他用，并不会将这些信息对外披露或向第三方提供，但下列情况除外：</view>
+    <view class="txtP">(1)事先获得用户的明确授权；</view>
+<view class="txtP">(2)根据有关的法律法规要求；</view>
+<view class="txtP">(3)按照相关政府主管部门的要求；</view>
+<view class="txtP">(4)为维护社会公众的利益。</view>
+<view class="txtP">3、法律责任与免责：</view>
+<view class="txtP">3.1本平台进行定期检查、更新软硬件、针对突发事件、不可抗力、电脑病毒、系统故障等因素导致的正常服务中断、中止，本平台不承担责任，本平台将尽力避免服务中断并将中断时间限制在最短时间内。</view>
+<view class="txtP">3.2用户因第三方如电信部门的通讯线路故障、技术问题、网络、电话故障及其他各种不可抗力原因而遭受的一切损失，本平台不承担责任。</view>
+<view class="txtP">
+3.3因用户手机被盗、账号密码被盗等用户原因导致的损失，由用户自行承担责任，本平台不承担责任。</view>
+<view class="txtP">4、法律适用</view>
+<view class="txtP">4.1本协议之订立、生效、解释、修订、补充、终止、执行与争议解决均适用中华人民共和国法律；如法律无相关规定的，参照商业惯例或行业惯例。</view>
+<view class="txtP">4.2使用本平台发生任何争议的最终解释权归本平台所有。</view>
+<view class="txtP">4.3本协议任一条款被视为废止、无效或不可执行，该条应视为可分的且并不影响本协议其余条款的有效性及可执行性。 </view>
+<view class="txtP">注：本协议版本更新日期为2021年9月1日，自用户注册之日起生效。</view>
+      </view>
+      <view class="registerConfrim" bindtap="confirmTxt">确定</view>
+    </scroll-view>
+    </view>
+  </view>
+</van-overlay>
+</view>

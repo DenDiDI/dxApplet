@@ -1,0 +1,49 @@
+<view class="container">
+  <view>
+  <!-- 门店名称 -->
+    <input type="value" placeholder-class="mplacehodlerClass" placeholder="请输入门店名称" bindblur="getShopName"/>
+    <input type="value" placeholder-class="mplacehodlerClass" placeholder="请输入门店简称" bindblur="getShopShotName"/>
+    <input type="value" placeholder-class="mplacehodlerClass" placeholder="请输入门店代码" bindblur="getShopCode"/>
+  <!-- 门店属性 -->
+    <view class="select-box">
+    <picker mode="selector" bindchange="bindPickerShopTypeChange" range="{{shopTypeArr}}" value="{{index}}">
+        <view class="select" style="width:inherit;border-bottom:1rpx solid rgba(0,0,0,0.1)">
+          {{shopTypeVal}}
+        </view>
+    </picker>
+    <span class="select-box-span">
+      <van-icon name="arrow" />
+    </span>
+  </view>
+    <!-- 连锁门店名称 -->
+    <input type="value" placeholder-class="mplacehodlerClass" placeholder="请输入连锁店名称" bindblur="getShopTypeName"/>
+    <!-- 门店电话 -->
+    <input type="value"  placeholder-class="mplacehodlerClass" placeholder="请输入门店电话" bindblur="getPhone"/>
+    <!-- 门店位置 -->
+    <view class="select-box">
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="select" style="width:inherit;border-bottom:1rpx solid rgba(0,0,0,0.1)">
+      {{region[0]}}{{region[1]}}{{region[2]}}
+    </view>
+  </picker>
+    <span class="select-box-span">
+      <van-icon name="arrow" />
+    </span>
+  </view>
+  <!-- 奖励策略 -->
+  <view class="select-box">
+    <picker mode="selector" bindchange="bindPickerStrageyChange" range="{{strategyDataArr}}" value="{{index}}">
+        <view class="select" style="width:inherit;border-bottom:1rpx solid rgba(0,0,0,0.1)">
+          {{strategyVal}}
+        </view>
+    </picker>
+    <span class="select-box-span">
+      <van-icon name="arrow" />
+    </span>
+  </view>
+  <input type="value" bindchange="getDec" placeholder-class="mplacehodlerClass" placeholder="备注"/>
+  </view>
+  <view class="b-mine-addShop-btn" bindtap="submit">提交</view>
+  
+</view>
+

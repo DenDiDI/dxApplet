@@ -1,0 +1,221 @@
+@import '../../assets/css/common.wxss';
+.container{
+  padding:20rpx 32rpx;
+  box-sizing: border-box;
+}
+.mine-out{
+  width: 300rpx;
+  height: 84rpx;
+  background: #007BFF;
+  border-radius: 8rpx;
+  position: fixed;
+  bottom: 180rpx;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  color: #000;
+  font-size: 32rpx;
+  letter-spacing: 6rpx;
+  line-height: 84rpx;
+}
+
+/* .txtColor{
+  color: #000;
+} */
+/* 导购员 */
+.s-mine-msg{
+  width: 686rpx;
+  height: 200rpx;
+  background: linear-gradient(316deg, #74DFFE 0%, #40BCFC 100%);
+  border-radius: 12rpx;
+  opacity: 0.88;
+  padding: 36rpx 32rpx;
+  box-sizing: border-box;
+  display:flex;
+}
+.s-mine-msg-img{
+  width:128rpx;
+  height:128rpx;
+  margin-right:20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.s-mine-msg-img image{
+  width:128rpx;
+  height:128rpx;
+}
+.s-mine-msg-content{
+  display:flex;
+  flex-direction: column;
+  color: #fff;
+}
+.s-mine-msg-name{
+  font-size: 40rpx;
+  font-weight: 600;
+  letter-spacing: 4rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+.s-mine-msg-detail-role{
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  margin-right: 30rpx;
+  letter-spacing: 2rpx;
+}
+.s-mine-msg-detail-phone{
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+/*导购员提现栏 */
+.s-mine-cash-content{
+  width: 686rpx;
+  height: 398rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  margin-top: 20rpx;
+  position: relative;
+  padding: 36rpx 32rpx 36rpx;
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.s-mine-cash{
+  width: 646rpx;
+  height: 200rpx;
+}
+.s-mine-cash-money{
+  font-size: 60rpx;
+  font-family: PingFang-SC-Bold, PingFang-SC;
+  font-weight: bold;
+  color: #131415 ;
+}
+.s-mine-cash-money-text{
+  font-size: 24rpx;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  font-weight: 500;
+  color: #131415;
+}
+.s-mine-cash-record-btn,
+.s-mine-cash-btn{
+  width: 166rpx;
+  height: 54rpx;
+  background: #FFFFFF;
+  border-radius: 32rpx;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  font-weight: 500;
+  line-height: 54rpx;
+  text-align: center;
+  color: #007BFF;
+  position: absolute;
+}
+.s-mine-cash-btn{
+  right: 36rpx;
+  top:46rpx;
+}
+.s-mine-cash-record-btn{
+  right: 36rpx;
+  top:120rpx;
+}
+
+.s-mine-cash-status-list{
+  display:flex;
+  flex-direction: row;
+  padding-top: 30rpx;
+}
+.s-mine-cash-status-item{
+  width: 220rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #131415;
+  opacity: 0.88;
+}
+.s-mine-cash-status-item-money{
+  font-size: 40rpx;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  font-weight: 500;
+}
+.s-mine-cash-status-item-text{
+  font-size: 24rpx;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  font-weight: 500;
+}
+.s-mine-other{
+  margin-top: 26rpx;
+  color: #131415;
+  opacity: 0.88;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+.s-mine-other-service{
+  width: 686rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  color: #131415;
+  opacity: 0.8;
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset 0px -1rpx 0px 0px #E1E1E1;
+}
+
+.s-mine-other-service image{
+  width:22rpx;
+  height:40rpx;
+}
+
+/* 业务员我的 */
+
+.b-mine-msg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:464rpx;
+  width: 100%;
+  color: #131415;
+  font-size: 32rpx;
+  box-sizing: border-box;
+}
+.b-mine-msg-image{
+  width: 128rpx;
+  height:128rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.b-mine-msg-image image{
+  width: 128rpx;
+  height:128rpx;
+}
+.b-mine-msg-name{
+  font-size: 40rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 600;
+  color: #131415;
+  opacity: 0.9;
+  margin-top: 20rpx;
+}
+.b-mine-msg-role-name{
+  margin: 10rpx 0rpx;
+}
+.b-mine-msg-other{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.b-mine-btn{
+  margin-top: 60rpx;
+  width: 622rpx;
+  height: 84rpx;
+  background: #007BFF;
+  border-radius: 8rpx;
+  line-height: 84rpx;
+  text-align: center;
+  color: #131415;
+  letter-spacing: 4rpx;
+  font-size: 32rpx;
+}

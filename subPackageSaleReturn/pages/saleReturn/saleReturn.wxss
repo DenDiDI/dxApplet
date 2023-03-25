@@ -1,0 +1,114 @@
+@import "../../../assets/css/common.wxss";
+.contanier{
+  box-sizing: border-box;
+  padding: 35rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+page{
+  position: relative;
+  background-color: #ffffff;
+}
+.b-code-input{
+  width: 622rpx;
+  height: 100rpx;
+  /* position: relative; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid rgba(0,0,0,0.1);
+}
+.b-code-input>input{
+  margin-top:4rpx;
+  width: 400rpx !important;
+  height: 100rpx;
+  font-size: 32rpx;
+  border: none !important;
+  border-radius: 0rpx !important;
+  color:#000;
+  box-shadow: none !important;
+}
+.s-code-scan{
+  width: 200rpx;
+  height:100rpx;
+  text-align: center;
+  display: inline-block;
+  display: flex;
+  margin-top:4rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.s-code-submit{
+  width: 622rpx;
+  height: 84rpx;
+  background: #007BFF;
+  border-radius: 8rpx;
+  margin: 80rpx auto;
+  color: #fff;
+  text-align: center;
+  font-size: 32rpx;
+  letter-spacing: 6rpx;
+  line-height: 84rpx;
+}
+.b-select-input{
+  width: 686rpx !important;
+  display: flex;
+  margin-top: 20rpx;
+  justify-content: center;
+}
+.s-code-scan>span{
+  font-size: 30rpx;
+  padding-left: 10rpx;
+  color: #000;
+ 
+}
+.s-code-add-btn{
+  margin: 60rpx auto;
+  width: 622rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  letter-spacing: 4rpx;
+  color: #000;
+  font-size: 32rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  border: 2rpx solid #979797;
+}
+
+.s-code-smark{
+  position: absolute;
+  background-color: #4a4a4b;
+  top:30%;
+  /* left:50%; */
+  max-height: 800rpx;
+  color: #fff;
+  font-size: 32rpx;
+  padding: 30rpx;
+  border-radius: 18rpx;
+  width: 580rpx;
+  z-index:99;
+  line-height: 60rpx;
+  text-align: center;
+  white-space:pre-wrap;
+}
+.s-code-del{
+  height:100rpx;
+  line-height: 116rpx;
+  margin-top: 4rpx;
+}
+.b-select-box{
+  min-height:100rpx;
+  color: #000;
+  opacity: 0.8;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset 0px -1px 0px 0px rgba(225,225,225,0.5);
+}

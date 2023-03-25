@@ -1,0 +1,18 @@
+<view class="container"> 
+  <view class="s-cashRecord-list-content" wx:for="{{cashRecordList}}" wx:key="{{item.sleId}}">
+    <view class="s-cashRecord-list-title">
+      <view>提现</view>
+      <view class="red">￥{{item.transactionAmount}}</view>
+    </view>
+    <view class="line"></view>
+    <view class="s-cashRecord-time">
+      <span>申请时间</span>
+      <span>{{item.createTime}}</span>
+    </view>
+    <view class="s-cashRecord-status">
+      <span>申请状态</span>
+      <span>{{item.transactionStatus==0?'交易中':item.transactionStatus==1?'交易完成':'交易失败'}}</span>
+    </view>
+  </view>
+  
+</view>

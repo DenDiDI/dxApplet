@@ -1,0 +1,72 @@
+
+@import "../../assets/css/common.wxss";
+.container{
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+.getCodeBtn{
+  width:222rpx;
+  height:100rpx;
+  box-shadow: inset 0px -1px 0px 0px rgba(225,225,225,0.5);
+  line-height: 100rpx;
+  text-align: center;
+  margin-top:4rpx;
+  color:#131415;
+}
+button[disabled]:not([type]) { 
+  background-color: #007DFF !important; 
+  color:#fff !important;
+  }
+.loginContent{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#fff;
+}
+
+.loginTitle{
+  font-size: 40rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  margin-top: 94rpx;
+  color: #131415;
+}
+.loginText{
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  font-weight: 500;
+  margin-top: 60rpx;
+  color: #131415;
+}
+.loginInput{
+  height:300rpx;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin-top: 116rpx;
+}
+.loginInput input{
+  color: #131415 !important;
+}
+.loginBtn{
+  width:622rpx;
+  height:84rpx;
+  border:none;
+  font-size: 32rpx;
+  color:#fff;
+  margin-top: 94rpx;
+  background-color: #007BFF;
+}
+.loginOther{
+  font-size: 32rpx;
+  margin-top: 32rpx;
+  color:#131415;
+}
+.loginRegisterBtn{
+  color: #007BFF;
+}

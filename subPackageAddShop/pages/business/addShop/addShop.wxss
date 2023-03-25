@@ -1,0 +1,23 @@
+/* pages/business/addShop/addShop.wxss */
+@import "../../../../assets/css/common.wxss";
+
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 36rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+
+}
+.b-mine-addShop-btn{
+  width: 622rpx;
+  height: 84rpx;
+  background: #007BFF;
+  border-radius: 8rpx;
+  margin-top: 60rpx;
+  text-align: center;
+  line-height: 84rpx;
+  color: #fff;
+  font-size: 32rpx;
+}

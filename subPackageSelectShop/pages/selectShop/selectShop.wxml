@@ -1,0 +1,10 @@
+<view class="contanier">
+  <view>
+    <van-search value="{{ value }}" placeholder="请输入门店关键词" bind:change="getShopList"/>
+  </view>
+  <view class="shoplist">
+    <view wx:for="{{searchData}}" wx:for-index="i">
+      <view class="shopItem" bindtap="getShopVal" data-id="{{i}}">{{item}}</view>
+    </view>
+  </view>
+</view>

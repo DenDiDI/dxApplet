@@ -1,0 +1,149 @@
+@import "../../../../assets/css/common.wxss";
+.container{
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100%; */
+}
+.s-color{
+  color: #131415 !important;
+}
+
+.getCodeBtn{
+  width:220rpx;
+  height:100rpx;
+  /* box-shadow: inset 0px -1px 0px 0px rgba(225,225,225,0.5); */
+  /* background-color: #007BFF; */
+  line-height: 100rpx;
+  text-align: center;
+  margin-top:0rpx;
+  color: #131415;
+  /* border-radius: 10rpx; */
+}
+.require{
+  position: relative;
+  /* background-color: pink; */
+}
+.require::after{
+  position:absolute;
+  content: "*";
+  top:30%;
+  color: red;
+  left:-25rpx;
+  clear: both;
+}
+.selShop{
+  height: 100rpx;
+  line-height:100rpx;
+  font-size: 32rpx;
+  color:#131415 !important;
+  opacity: 0.8;
+  width:90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: 4rpx;
+}
+.registerContent input{
+  color:#131415 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.registerContent .mplacehodlerClass{
+  color:#131415;
+  opacity: 0.8;
+  letter-spacing: 4rpx;
+}
+.registerContent{
+  margin-top: 48rpx;
+
+}
+.registerContent>view{
+  /* background-color: pink; */
+  box-shadow: inset 0px -1px 0px 0px rgba(225,225,225,0.5);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.headerTxt{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-top: 20rpx;
+}
+.txtP{
+  text-indent: 2em;
+  padding: 10rpx 0rpx;
+}
+.block {
+  width: 686rpx;
+  height: 1000rpx;
+  border-radius: 20rpx;
+  overflow-y: auto;
+  padding: 20rpx 35rpx 80rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.registerAgree{
+  display:flex;
+  height:64rpx;
+  margin-top: 28rpx;
+  flex-direction: row !important;
+  align-items: center;
+  box-shadow:none !important;
+}
+
+.registerAgressTxt{
+  color:#999;
+  font-size: 24rpx;
+}
+.registerAgressTxt>span{
+  color:#007BFF;
+  opacity: 0.8;
+}
+
+
+.registerConfrim{
+  margin-top:54rpx;
+  width:622rpx;
+  height: 84rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  background-color:#007BFF !important;
+  color:#fff !important;
+  line-height:84rpx;
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+}
+
+
+picker-view {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 45%;
+  border-radius: 30rpx 30rpx 0 0;
+}
+picker-view-column {
+  border-radius: 30rpx 30rpx 0 0;
+  color: #444444;
+  font-size: 28rpx;
+}
+.pickerCol {
+  width: 50%;
+  height: 96rpx;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right,#FBFBFB,#FFAC30,#FBFBFB) 1 1;
+  margin-left:25%;
+}

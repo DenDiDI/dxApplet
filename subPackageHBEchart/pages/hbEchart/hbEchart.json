@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "van-calendar":"@vant/weapp/calendar/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-action-sheet":"@vant/weapp/action-sheet/index",
+    "ec-canvas": "../../../ec-canvas/ec-canvas",
+    "date-sel-temp":"../../../components/dateSelTmp/dateSelTemp"
+  },
+  "navigationBarTitleText": "红包零售费比分析",
+  "navigationBarBackgroundColor": "#1d1e25",
+  "navigationBarTextStyle": "white"
+  
+}

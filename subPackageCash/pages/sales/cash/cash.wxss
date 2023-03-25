@@ -1,0 +1,55 @@
+@import '../../../../assets/css/common.wxss';
+.container{
+  padding: 14rpx 32rpx;
+  box-sizing: border-box;
+}
+page{
+  background-color: #f9f9f9;
+}
+button[disabled]:not([type]) { 
+  background-color: #007DFF !important; 
+  color:#fff !important;
+  }
+.s-code-cash-content{
+  /* margin-top:20rpx; */
+  width: 686rpx;
+  height: 258rpx;
+  padding-left: 50rpx;
+  padding-top: 54rpx;
+  box-sizing: border-box;
+  background: linear-gradient(138deg, #4162FF 0%, #6D86FF 100%);
+  border-radius: 12rpx;
+  position:relative;
+}
+.s-code-cash-content span{
+  width: 96rpx;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 34rpx;
+  letter-spacing: 4rpx;
+}
+.s-code-cash-money{
+  font-size: 60rpx;
+  color:#fff;
+}
+.s-code-cash-input{
+  margin-top: 20rpx;
+  position: relative;
+  
+}
+.s-code-cash-input input{
+  width: 686rpx;
+  height: 80rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  color: #313131;
+  border-top:0.5px solid #979797;
+  border-right:0.5px solid #979797;
+  border-left:0.5px solid #979797;
+  /* border: 0.5px solid #979797; */
+
+}

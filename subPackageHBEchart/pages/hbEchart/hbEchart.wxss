@@ -1,0 +1,32 @@
+
+@import "../../../assets/css/common.wxss";
+@import "../../../assets/css/chart.wxss";
+.container{
+  box-sizing: border-box;
+  padding-bottom: 180rpx;
+  height: 100%;
+}
+page{
+  background-color: #2B2B31;
+}
+
+.hb-chart2-content{
+  height: 1000rpx;
+  margin: 20rpx auto;
+} 
+.chart2-header{
+  display: flex;
+  padding-right:20rpx;
+  justify-content: space-between;
+}
+/* .hb-chart1{
+  min-height: 400rpx;
+} */
+.hb-chart2{
+  width: 80%;
+  height: 700rpx;
+  margin: 0rpx auto;
+}
+
+
+

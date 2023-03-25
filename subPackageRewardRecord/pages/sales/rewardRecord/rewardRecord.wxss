@@ -1,0 +1,180 @@
+@import '../../../../assets/css/common.wxss';
+.container{
+  box-sizing: border-box;
+  padding:20rpx 32rpx 100rpx 32rpx;
+  height: 100%;
+
+}
+page{
+  background-color:  #F8F8F8;
+}
+.sbgColor{
+  background-color: #fff;
+}
+.s-title{
+  font-size: 28rpx !important;
+  /* font-weight: bolder !important; */
+  padding-left:10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* 导购员提现 */
+.s-code-cash-content{
+  /* margin-top:20rpx; */
+  width: 686rpx;
+  height: 258rpx;
+  padding-left: 50rpx;
+  padding-top: 54rpx;
+  box-sizing: border-box;
+  background: linear-gradient(138deg, #4162FF 0%, #6D86FF 100%);
+  border-radius: 12rpx;
+  position:relative;
+}
+.s-code-cash-content span{
+  width: 96rpx;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  letter-spacing: 4rpx;
+  line-height: 34rpx;
+}
+.s-code-cash-money{
+  font-size: 60rpx;
+  color:#fff;
+}
+.s-code-cash-btn-box{
+  position:absolute;
+  right:42rpx;
+  bottom: 36rpx;
+}
+.s-code-cash-btn{
+  width: 166rpx;
+  height: 64rpx;
+  background: #FFFFFF;
+  color: #007BFF;
+  text-align: center;
+  line-height: 64rpx;
+  border-radius: 32rpx;
+}
+/* 导购员列表 */
+
+
+.s-code-list-item{
+  width:100%;
+  /* height:160rpx; */
+  /* border:1px solid #fff; */
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: column;
+  text-align: left;
+  /* align-items: left; */
+  padding-left: 20rpx;
+}
+.sfontColor{
+  color: #131415 !important;
+}
+.sline{
+  background-color: #d8d7d7 !important;
+  height:1rpx;
+}
+.s-ceode-d{
+  padding-bottom: 20rpx;
+}
+.s-code-list-items>span{
+  display: inline-block;
+  color: #131415;
+  opacity: 0.7;
+  font-size: 30rpx;
+  width: 200rpx;
+  white-space: nowrap;
+  margin-right: 30rpx;
+  flex:1;
+}
+.s-code-list-items{
+  display:flex;
+  color: #131415;
+  opacity: 0.9;
+  width: 100%;
+  min-height: 40rpx;
+  align-items: center;
+  font-size: 30rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.s-code-list-items>view{
+  flex:4;
+  max-width: 400rpx;
+  text-align: left;
+  word-wrap: break-word;
+}
+.s-edit{
+  width:200rpx;
+  height:80rpx;
+  background-color: #ccc;
+  margin:0 auto;
+  text-align: center !important;
+  line-height: 80rpx;
+  border-radius: 8rpx;
+  color:#fff;
+}
+.s-scanCode-detail{
+  height:100%;
+}
+.s-detail-box{
+  background-color:rgb(172, 172, 172,0.1);
+  margin-bottom: 20rpx;
+  padding:30rpx;
+}
+.s-nowrap{
+  white-space: nowrap;
+}
+.s-code-list-item-img{
+  width:260rpx;
+  height:120rpx;
+  display:flex;
+  flex-direction: row;
+}
+.s-code-list2-item-img{
+  width:120rpx;
+  height:120rpx;
+  margin-right: 20rpx;
+}
+.s-code-list-item-img-dec{
+  font-size: 32rpx;
+  width: 120rpx;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+.s-code-list2-item-img image,
+.s-code-list-item-img image{
+  width:120rpx;
+  height:120rpx;
+  margin-right: 20rpx;
+}
+.s-code-list2-item-time,
+.s-code-list-item-time{
+  height: 50rpx;
+  /* background-color: pink; */
+  text-align: right;
+  font-size: 24rpx;
+  color: #fff;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+}
+.s-code-list2-item-time{
+  text-align: left;
+}
+.s-code-list-item-code{
+  width: 380rpx;
+  /* height: 40rpx; */
+  /* background-color: pink; */
+  color: #fff;
+  text-align: left;
+  font-size: 34rpx;
+  line-height: 40rpx;
+  /* margin-top: 10rpx; */
+}

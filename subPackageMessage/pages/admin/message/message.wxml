@@ -1,0 +1,20 @@
+<view>
+  <!-- 输入框 -->
+  <view class="msg-input">
+    <input type="value"/>
+    <!-- <image src="../../../assets/images/searchIcon.png"></image> -->
+  </view>
+  <!-- 充值列表 -->
+  <view class="a-task-msg-list" bindtap="getTaskDetail" wx:for="{{a_msg_list}}" wx:for-index="i" wx:key="item">
+    <view class="a-task-msg-item-data">
+      <view class="a-task-msg-item-money">{{item.status==1?'充值成功':'充值失败'}}￥{{item.money}}</view>
+      <view class="a-task-msg-item-time">{{item.time}}</view>
+      <span class="{{item.checkStatus?'greenBg':'redBg'}}">{{item.checkStatus==1?'已查阅':'未查阅'}}</span>
+    </view>
+    <view class="a-task-msg-item-detail" >
+      <van-icon name="arrow" color="#fff" size="24"/>
+    </view>
+  </view>
+  <view>
+  </view>
+</view>

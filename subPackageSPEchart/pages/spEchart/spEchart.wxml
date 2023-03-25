@@ -1,0 +1,128 @@
+<!--subPackageHBEchart/pages/hbEchart/hbEchart.wxml-->
+<view class="contanier">
+  <date-sel-temp dateData="{{dateData}}" binditemChange="handleDateChange"></date-sel-temp>
+  <!-- 第一个柱状图 -->
+  <view class="chart-content">
+  <view class="chart-header">
+    <view>门店商品扫码统计</view>
+    <view class="chartShowTxt" bindtap="showPopup" data-chart="chart1">{{selShopTxt1}}</view>
+  </view>
+  <view class="chart2-content sp-chart">
+    <view class="sp-chart1-btn">
+      <view class="sp-saleAndScanSel" bindtap="getSaleNum">
+      <view class="sp-saleNum"></view>
+        销售额
+      </view>
+      <view class="sp-saleAndScanSel" bindtap="getScanNum"> 
+        <view class="sp-scanNum"></view>
+        扫码数量
+        </view>
+    </view>
+    <view class="chart-bar-box" wx:if="{{chartFlg1}}">
+    <view class="chart-bar-item" wx:for="{{chartData}}" wx:key="i" wx:for-index="i">
+    <view class="chart-bar-item-index">{{i+1}}</view>
+    <view class="chart-bar-item-barbox">
+      <view>{{item.name}}</view>
+      <view class="chart-bar-item-barbox-bar">
+        <view class="chart-bar-item-barbox-abar" style="width:{{item.num}};background-color:{{item.color}}"></view>
+      </view> 
+    </view>
+    <view>{{item.numData}}</view>
+    </view>
+    
+  </view>
+    
+    <!-- <view class="chart2 noDataTxt" wx:else>暂无数据</view> -->
+  </view>
+  </view>
+  <!-- 第二个饼图 -->
+  <view class="chart2-content sp-chart2-content">
+    <view class="chart-header">
+      <view style="width:480rpx">商品零售额占比统计（显示前5项）</view>
+      <view class="chartShowTxt" bindtap="showPopup" data-chart="chart2">{{selShopTxt2}}</view>
+    </view>
+      <view class="chart2" wx:if="{{chartFlg2}}">
+        <ec-canvas  id="sp-echart2" canvas-id="mychart-bar2" ec="{{ec2}}" force-use-old-canvas="true"></ec-canvas>
+      </view>
+      <!-- <view class="char t2 noDataTxt" wx:else>暂无数据</view> -->
+  </view>
+  <!-- 第三个折线图 商品销量趋势图 -->
+  <view class="chart2-content sp-chart2-content">
+    <view class="chart-header chart2-header">
+    <view style="width:120px">商品销量趋势图</view>
+    <view class="chartShowTxt" bindtap="showPopup" data-chart="chart3">{{selShopTxt3}}</view>
+    <view class="chartShowTxt" bindtap="showGoodsPopup">{{selGoodsTxt3}}</view>
+    </view>
+      <view class="chart2" wx:if="{{echart3Show}}">
+        <ec-canvas id="sp-echart3" canvas-id="mychart-bar3" ec="{{ec3}}" force-use-old-canvas="true"></ec-canvas>
+      </view>
+      <!-- <view class="chart2 noDataTxt" wx:else>暂无数据</view> -->
+  </view>
+  <!-- 第四个柱状图 -->
+  <view class="chart2-content sp-chart2-content">
+    <view class="chart-header chart2-header" style="position: relative;">
+    <!-- <view style="white-space: nowrap;"> -->
+      <view style="width:220px" > 商品销售排行(TOP10) </view>
+      <view class="chartShowTxt" bindtap="showPopup" data-chart="chart4">{{selShopTxt4}}</view>
+      <view class="chartShowTxt" bindtap="showMonthPopup">{{selMonthTxt}}</view>
+      <view wx:if="{{showMonth}}" style="z-index:999;position:absolute;background-color:rgba(0,0,0,0.5);width:180rpx;height:620rpx;right:0rpx;top:80rpx;">
+        <view wx:for="{{monthList}}" wx:for-index="i">
+          <view bindtap="selMonthVal" data-index="{{i}}" style="width:100%;height:44rpx;line-height:44rpx;text-align: center;padding:4rpx">{{item}}</view>
+        </view>
+      </view>
+    </view>
+      <view class="chart-bar-box" wx:if="{{echart4Show}}">
+        <!-- <ec-canvas id="sp-echart3" canvas-id="mychart-bar3" ec="{{ec3}}" force-use-old-canvas="true"></ec-canvas> -->
+        <view class="chart-bar-item" wx:for="{{goodsTop10Data}}" wx:key="i" wx:for-index="i">
+      <view class="chart-bar-item-index">{{i+1}}</view>
+      <view class="chart-bar-item-barbox">
+      <view>{{item.name}}</view>
+      <view class="chart-bar-item-barbox-bar">
+        <view class="chart-bar-item-barbox-abar" style="width:{{item.num}};background-color:{{item.color}}"></view>
+      </view> 
+    </view>
+    <view>{{item.numData}}</view>
+    </view>
+      </view>
+      <view class="chart2 noDataTxt" wx:else>暂无数据</view>
+  </view>
+  <van-popup show="{{showShop}}" bind:close="closeShop">
+  <view class="selbanner">
+    <view class="selbannerBox">
+      <van-search value="{{ inpShopValue }}" placeholder="请输入门店关键词" bind:change="getSearchShopList"/>
+      <van-icon name="cross" bindtap="closeShop"/>
+    </view>
+    <view style="width:100%;display:flex;flex-direction: column;">
+      <view wx:for="{{searchShopData}}" wx:key="i" style="min-height: 30px;padding-left:20rpx;font-size:30rpx;border-bottom:1px solid rgba(177, 177, 177, 0.1);margin-bottom:20rpx;">
+        <view bindtap="getSelectVal" data-id="{{item.shopId}}">{{item.shopName}}</view>
+      </view>
+    </view>
+  </view>
+</van-popup>
+
+<van-popup show="{{showGoods}}" bind:close="closeGoods">
+  <view class="selbanner">
+    <view class="selbannerBox">
+      <van-search value="{{ inpGoodsValue }}" placeholder="请输入商品关键词" bind:change="getSearchGoodsList"/>
+      <van-icon name="cross" bindtap="closeGoods"/>
+    </view>
+    
+    <view style="width:100%;display:flex;flex-direction: column;">
+      <view wx:for="{{searchGoodsData}}" wx:key="i" style="min-height: 30px;padding-left:20rpx;font-size:30rpx;border-bottom:1px solid rgba(177, 177, 177, 0.1);margin-bottom:20rpx;">
+        <view bindtap="getSelectGoodsVal" data-id="{{item.goodsBaseId}}">{{item.goodsBaseName}}</view>
+      </view>
+    </view>
+  </view>
+</van-popup>
+  <!-- <van-calendar
+  type="range"
+  bind:close="onClose"
+  bind:confirm="onConfirm"
+  show="{{ show }}"
+  min-date="{{ minDate }}"
+  max-date="{{ maxDate }}"
+/> -->
+
+</view>
+
+

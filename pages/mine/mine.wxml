@@ -1,0 +1,106 @@
+
+<view wx:if="{{role_Id==3}}" class="container sbg">
+
+  <view class="s-mine-msg">
+    <view class="s-mine-msg-img">
+      <image src="{{avatarUrl}}"></image>
+    </view>
+    <view class="s-mine-msg-content">
+      <view class="s-mine-msg-name">{{name}}
+        <span class="s-mine-msg-detail-phone">{{s_phone}}</span>
+      </view>
+     
+      <view class="s-mine-msg-detail">
+        <span class="s-mine-msg-detail-role">{{s_shop}}</span>
+        
+      </view>
+    </view>
+  </view>
+
+  <view class="s-mine-cash-content">
+    <view class="s-mine-cash">
+      <view class="s-mine-cash-money">
+        {{s_all_money}}
+      </view>
+      <span class="s-mine-cash-money-text">总收益</span>
+      <view class="s-mine-cash-btn" bindtap="s_getMoney">提现</view>
+      <view class="s-mine-cash-record-btn" bindtap="s_getCashRecord">提现记录</view>
+    </view>
+    <view class="line"></view>
+
+    <view class="s-mine-cash-status-list">
+      <view class="s-mine-cash-status-item">
+        <span class="s-mine-cash-status-item-money">￥{{s_gmoney_ing}}</span>
+        <span class="s-mine-cash-status-item-text">提现中</span>
+      </view>
+      <view class="s-mine-cash-status-item">
+        <span class="s-mine-cash-status-item-money">￥{{s_all_gmoney}}</span>
+        <span class="s-mine-cash-status-item-text">已提现</span>
+      </view>
+      <view class="s-mine-cash-status-item">
+        <span class="s-mine-cash-status-item-money">￥{{s_all_agm}}</span>
+        <span class="s-mine-cash-status-item-text">可提现</span>
+      </view>
+    </view>
+    
+  </view>
+
+    <view class="s-mine-other" bindtap="s_call">
+      <view class="s-mine-other-service">
+       <view>联系客服</view>
+       <van-icon name="arrow"/>
+      </view>
+    </view>
+    <view class="s-mine-other" bindtap="s_delCount">
+      <view class="s-mine-other-service">
+       <view>注销账号</view>
+       <van-icon name="arrow"/>
+      </view>
+    </view>
+    <view class="s-mine-other" bindtap="loginOut">
+      <view class="s-mine-other-service">
+       <view>退出登陆</view>
+       <van-icon name="arrow"/>
+      </view>
+    </view>
+
+    <van-dialog id="van-dialog" />
+</view>
+
+<view wx:if="{{role_Id==2}}" class="bbg" style="width:{{ScreenTotalW}}rpx;height:{{ScreenTotalH}}rpx">
+  <view class="b-mine-msg">
+    <view class="b-mine-msg-image">
+      <image src="{{avatarUrl}}"></image>
+    </view>
+    <view class="b-mine-msg-name">{{name}}</view>
+    <view class="b-mine-msg-role-name">业务员</view>
+    <view>{{s_phone}}</view>
+  </view>
+  <view class="b-mine-msg-other">
+    <view class="s-mine-other-service txtColor" bindtap="b_AddShop">
+      <view>新增门店</view>
+      <van-icon name="arrow" />
+    </view>
+    <view class="s-mine-other-service txtColor" bindtap="b_ScanCode">
+      <view>上传防窜码</view>
+      <van-icon name="arrow" />
+    </view>
+    <view class="s-mine-other-service txtColor" bindtap="b_Return">
+      <view>退货管理</view>
+      <van-icon name="arrow" />
+    </view>
+    <view class="s-mine-other-service txtColor"  bindtap="loginOut">
+      <view>退出登录</view>
+      <van-icon name="arrow" />
+    </view>
+
+  </view>
+  <van-dialog id="van-dialog" />
+</view>
+
+
+
+<view wx:if="{{role_Id==1}}">
+  <text>管理员我的</text>
+</view> 
+

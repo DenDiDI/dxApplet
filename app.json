@@ -1,0 +1,180 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/bi/bi",
+    "pages/rankAndActive/rankAndActive",
+    "pages/taskAndCode/taskAndCode",
+    "custom-tab-bar/index"
+  ],
+  "subpackages": [
+    {
+      "root": "subPackageGoodsDetail",
+      "pages": [
+        "pages/sales/goodsDetail/goodsDetail"
+      ]
+    },
+    {
+      "root": "subPackageRegister",
+      "pages": [
+        "pages/sales/register/register"
+      ]
+    },
+    {
+      "root": "subPackageRewardRecord",
+      "pages": [
+        "pages/sales/rewardRecord/rewardRecord"
+      ]
+    },
+    {
+      "root": "subPackageCash",
+      "pages": [
+        "pages/sales/cash/cash"
+      ]
+    },
+    {
+      "root": "subPackageCashRecord",
+      "pages": [
+        "pages/sales/cashRecord/cashRecord"
+      ]
+    },
+    {
+      "root": "subPackageAddShop",
+      "pages": [
+        "pages/business/addShop/addShop"
+      ]
+    },
+    {
+      "root": "subPackageMessage",
+      "pages": [
+        "pages/admin/message/message"
+      ]
+    },
+    {
+      "root": "subPackageMessageDetail",
+      "pages": [
+        "pages/admin/messageDetail/messageDetail"
+      ]
+    },
+    {
+      "root": "subPackageAudit",
+      "pages": [
+        "pages/admin/audit/audit"
+      ]
+    },
+    {
+      "root": "subPackageHBEchart",
+      "pages": [
+        "pages/hbEchart/hbEchart"
+      ]
+    },
+    {
+      "root": "subPackageDXEchart",
+      "pages": [
+        "pages/dxEchart/dxEchart"
+      ]
+    },
+    {
+      "root": "subPackageSPEchart",
+      "pages": [
+        "pages/spEchart/spEchart"
+      ]
+    },
+    {
+      "root": "subPackageCHEchart",
+      "pages": [
+        "pages/chEchart/chEchart"
+      ]
+    },
+    {
+      "root": "subPackageDGYEchart",
+      "pages": [
+        "pages/dgyEchart/dgyEchart"
+      ]
+    },
+    {
+      "root": "subPackageSaleScanCode",
+      "pages": [
+        "pages/saleScanCode/saleScanCode"
+      ]
+    },
+    {
+      "root": "subPackageHBSacnEchart",
+      "pages": [
+        "pages/hbScanEchart/hbScanEchart"
+      ]
+    },
+    {
+      "root": "subPackageSelectShop",
+      "pages": [
+        "pages/selectShop/selectShop"
+      ]
+    },
+    {
+      "root": "subPackageSelectPageBlack",
+      "pages": [
+        "pages/selectPageBlack/selectPageBlack"
+      ]
+    },
+    {
+      "root": "subPackageCamera",
+      "pages": [
+        "pages/scanCamera/scanCamera"
+      ]
+    },
+    {
+      "root": "subPackageSaleReturn",
+      "pages": [
+        "pages/saleReturn/saleReturn"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "backgroundColor": "#FFFFFF",
+    "selectedColor": "#FF992E",
+    "color": "#C2C7CC",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./assets/images/shouye.png",
+        "selectedIconPath": "./assets/images/shouyeA@2x.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./assets/images/mine@2x.png",
+        "selectedIconPath": "./assets/images/mineA@2x.png"
+      },
+      {
+        "pagePath": "pages/bi/bi",
+        "text": "Bi",
+        "iconPath": "./assets/images/shuju.png",
+        "selectedIconPath": "./assets/images/shujuA.png"
+      },
+      {
+        "pagePath": "pages/rankAndActive/rankAndActive",
+        "text": "活动",
+        "iconPath": "./assets/images/huodong.png",
+        "selectedIconPath": "./assets/images/huodongA@2x.png"
+      },
+      {
+        "pagePath": "pages/taskAndCode/taskAndCode",
+        "text": "扫码",
+        "iconPath": "./assets/images/saomasoudan.png",
+        "selectedIconPath": "./assets/images/saomasoudanA.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,10 @@
+<view class="contanier">
+  <view>
+    <van-search  background="rgba(255,255,255,1)" value="{{ value }}" placeholder="{{inputTxt}}" bind:change="getSearchList"/>
+  </view>
+  <view class="selectList">
+    <view wx:for="{{searchData}}" wx:for-index="i">
+      <view class="selectItem" bindtap="getSelectVal" data-id="{{i}}">{{item}}</view>
+    </view>
+  </view>
+</view>

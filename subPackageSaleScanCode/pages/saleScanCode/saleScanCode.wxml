@@ -1,0 +1,28 @@
+<view class="contanier">
+  <view class="b-select-input">
+    <view class="select-box">
+    <view class="b-select-box" bindtap="bindPickerShopTypeChange">
+      <view class="selShop">{{shopV}}</view>
+      <span class="b-select-box-span">
+        <van-icon name="arrow"/>
+      </span>
+    </view>
+  </view>
+  </view>
+ 
+  
+  <view class="s-code-add-btn" bindtap="scanShop">
+    扫码识别防窜码
+  </view>
+
+
+    <view wx:if="{{inpLen!=0}}" style="color:tomato;width: 100%;padding-left:100rpx;font-size:32rpx">
+      扫码 {{inpLen}} 条
+    </view>
+
+  <button class="s-code-submit"  bindtap="submit" disabled="{{loadingFlg}}" >提交</button>
+
+  <scroll-view scroll-y="true"  class="s-code-smark" wx:if="{{s_result_show}}">
+    <view wx:for="{{s_result}}" style="width:100%">{{item}}</view>
+  </scroll-view>
+</view>

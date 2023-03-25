@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  },
+  "navigationBarTitleText": "BI数据",
+  "navigationBarBackgroundColor": "#1d1e25",
+  "navigationBarTextStyle": "white"
+}

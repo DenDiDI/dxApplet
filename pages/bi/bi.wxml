@@ -1,0 +1,186 @@
+<!--pages/bi/bi.wxml-->
+<!-- 业务员 -->
+<view wx:if="{{role_Id==2}}" class="container">
+<!-- <view>{{app.globalData.list}}</view> -->
+<!-- 今年红包扫码金额 -->
+  <view class="b-bi-dec" bindtap="toHongBaoScanEchart">
+    <image src="../../assets/images/hongbao1.png"></image>
+    <view>
+      今年红包扫码金额（元）：<span class="b-bi-dec-money">{{b_rewardTotal}}</span>
+    </view>
+  </view>
+  <!-- echart表格 -->
+  <view class="b-bi-echart">
+    <ec-canvas id="b-b-hb-echart" canvas-id="mychart-bar" ec="{{ec}}" force-use-old-canvas="true"></ec-canvas>
+  </view>
+  <!-- 模块统计 -->
+  <view class="b-bi-data-box">
+  <!-- 红包零售费比 -->
+    <view class="b-bi-data-item" bindtap="toHongBaoEchart">
+      <view class="b-bi-data-img hongbao">
+        <image src="../../assets/images/hongbaoIcon.png">
+        </image>
+      </view>
+      <view class="b-bi-data">
+        <view>红包零售费比</view>
+        <span>{{b_retailRatio}}%</span>
+      </view>
+    </view>
+    <!-- 动销率 -->
+    <view class="b-bi-data-item" bindtap="toDongXiaoEchart">
+      <view class="b-bi-data-img dongxiao">
+        <image src="../../assets/images/gongshuaiyinsuIcon.png">
+        </image>
+      </view>
+      <view class="b-bi-data">
+        <view>动销率</view>
+        <span>{{b_saleRatio}}%</span>
+      </view>
+    </view>
+    <!-- 商品扫码数 -->
+    <view class="b-bi-data-item" bindtap="toShangPinEchart">
+      <view class="b-bi-data-img saoma">
+        <image src="../../assets/images/goodsNumIcon.png">
+        </image>
+      </view>
+      <view class="b-bi-data">
+        <view>商品扫码数</view>
+        <span>{{b_scanCount}}</span>
+      </view>
+    </view>
+    <!-- 疑似窜货数 -->
+    <view class="b-bi-data-item" bindtap="toCuanHuoEchart">
+      <view class="b-bi-data-img cuanhuo">
+        <image src="../../assets/images/yisicuanhuoIcon.png">
+        </image>
+      </view>
+      <view class="b-bi-data">
+        <view>疑似窜货数</view>
+        <span>{{b_chCount}}</span>
+      </view>
+    </view>
+    <!-- 导购员人数 -->
+    <view class="b-bi-data-item" bindtap="toDaoGouYuanEchart">
+      <view class="b-bi-data-img daogouyuan">
+        <image src="../../assets/images/salesNumIcon.png">
+        </image>
+      </view>
+      <view class="b-bi-data">
+        <view>导购员人数</view>
+        <span>{{b_salesCount}}</span>
+      </view>
+    </view>
+    <!-- 门店总数 -->
+    <view class="b-bi-data-item" bindtap="toDaoGouYuanEchart"> 
+      <view class="b-bi-data-img mendian">
+        <image src="../../assets/images/mendianNumIcon.png">
+        </image>
+      </view>
+      <view class="b-bi-data">
+        <view>门店总数</view>
+        <span>{{b_shopCount}}</span>
+      </view>
+    </view>
+    <!-- <view style="width: 100%;background:pink;height:600px"> 
+      {{test}}-{{url}}
+    </view> -->
+  </view>
+</view>
+
+<!-- 管理员BI -->
+<view wx:if="{{role_Id==1}}" class="container" style="padding-bottom: 120rpx">
+  <!-- 管理员BI顶部的数据展示 -->
+  <view class="a-bi-top-content">
+    <view class="a-bi-top-left-money">
+      <view class="a-bi-top-left-item">
+        <span>预估可用天数（元）</span>
+        <span class="a-bi-top-item-num">5,000,222</span>
+      </view>
+      <view class="a-bi-top-line"></view>
+      <view class="a-bi-top-left-item">
+        <span>未使用余额（元）</span>
+        <span class="a-bi-top-item-num">5,000,222</span>
+      </view>
+    </view>
+    <view class="a-bi-top-right-money">
+      <view class="a-bi-top-right-money-top">
+        <span>红包未提现金额（元）</span>
+        <span class="a-bi-top-item-num">25</span>
+      </view>
+      <view class="a-bi-top-right-money-bottom">
+        <span>年度领红包金额（元）</span>
+        <span class="a-bi-top-item-num">25</span>
+      </view>
+    </view>
+  </view>
+  <!-- 红包扫码领取echart -->
+  <view class="a-bi-echart-item">
+    <view class="a-bi-echart-item-dec">
+      红包扫码领取金额（元）
+      <span>{{b_rewardTotal}}</span>
+    </view>
+    <view class="a-bi-echart-item-data">
+      <ec-canvas id="a-hb-echart" canvas-id="mychart-bar1" ec="{{ec1}}" force-use-old-canvas="true"></ec-canvas>
+    </view>
+  </view>
+  <!-- 门店动销率 -->
+  <view class="a-bi-echart-item">
+    <view class="a-bi-echart-item-dec">
+      门店动销率
+      <span>{{b_saleRatio}}%</span>
+    </view>
+    <view class="a-bi-echart-item-data">
+    
+    </view>
+  </view>
+  <view class="a-bi-echart-item">
+    <view class="a-bi-echart-item-dec">
+      红包零售比
+      <span>{{b_retailRatio}}%</span>
+    </view>
+    <view class="a-bi-echart-item-data">
+     
+    </view>
+  </view>
+  <view class="a-bi-echart-item">
+    <view class="a-bi-echart-item-dec">
+      商品扫码总数（个）
+      <span>{{b_scanCount}}</span>
+    </view>
+    <view class="a-bi-echart-item-data">
+     
+    </view>
+  </view>
+  <view class="a-bi-echart-item">
+    <view class="a-bi-echart-item-dec">
+      疑似窜货总数（个）
+      <span>{{b_chCount}}</span>
+    </view>
+    <view class="a-bi-echart-item-data">
+     
+    </view>
+  </view>
+  <view class="a-bi-echart-item">
+    <view class="a-bi-echart-item-dec">
+      门店总数（家）
+      <span>{{b_shopCount}}</span>
+    </view>
+    <view class="a-bi-echart-item-data">
+     
+    </view>
+  </view>
+  <view class="a-bi-echart-item">
+    <view class="a-bi-echart-item-dec">
+      导购员总数（人）
+      <span>{{b_salesCount}}</span>
+    </view>
+    <view class="a-bi-echart-item-data">
+     
+    </view>
+  </view>
+
+  
+
+</view>
+
+

@@ -1,0 +1,47 @@
+/* pages/home/home.wxss */
+@import "../../assets/css/common.wxss";
+
+.container{
+  box-sizing: border-box;
+  padding:20rpx 32rpx 100rpx 32rpx;
+  background-color:#F8F8F8;
+}
+.s-swiper{
+  /* margin-top: 10px; */
+  width: 687rpx;
+  height: 600rpx;
+}
+.s-swiper image{
+  width:100%;
+  height:600rpx;
+  object-fit:contain;
+}
+.s-content{
+  display: flex;
+  justify-content: space-between;
+}
+.s-record,
+.s-apply{
+  width: 336rpx;
+  height: 322rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  margin-top:20rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 32rpx;
+  color: #131415;
+  letter-spacing: 4rpx;
+}
+.s-apply image{
+  width:132rpx;
+  height:102rpx;
+  margin-bottom: 40rpx;
+}
+.s-record image{
+  width: 92rpx;
+  height: 98rpx;
+  margin-bottom: 40rpx;
+}

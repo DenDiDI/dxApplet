@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="loginContent">
+    <view class="loginTitle">动销逻辑</view>
+    <view class="loginText">欢迎使用动销逻辑，请登陆您的账号！</view>
+    <view class="loginInput">
+      <input value="{{delegateCode}}" type="value" bindblur="inputDelegateCode" placeholder-class="m0placehodlerClass" placeholder="请输入代理商代码"/>
+      <view class="cellRight">
+        <input model:value="{{loginPhone}}" type="value" bindinput="inputPhone" style="width: 402rpx;"
+        placeholder-class="m0placehodlerClass"placeholder="请输入注册的手机号"/>
+        <view class="cellRightSpan getCodeBtn"  bindtap="getCode">{{getCodeTxt}}</view>
+      </view>
+      <input model:value="{{loginCode}}" type="value" bindinput="inputCode" placeholder-class="m0placehodlerClass" placeholder="请输入验证码"/>
+    </view>
+    <button type="info" class="loginBtn" bindtap="toLogin" >登陆</button> 
+    <!-- <button type="info" class="loginBtn" open-type="getUserInfo" bindtap="getUserProfile">登陆</button>  -->
+    <view class="loginOther">
+      <span>没有账号？</span>
+      <!-- <span class="loginRegisterBtn" bindtap="toRegister">立即注册</span> -->
+      <span class="loginRegisterBtn" bindtap="toRegister">立即注册</span>
+      <!-- <button type="info" class="loginRegisterBtn" open-type="getUserInfo" bindtap="getUserProfile">登陆</button>  -->
+    </view>
+  </view>
+</view>

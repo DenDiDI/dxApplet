@@ -1,0 +1,42 @@
+<!-- 导购员的扫码 -->
+<view wx:if="{{role_Id==3}}" class="container sbg">
+  <view class="s-code-input" wx:for="{{inputList}}" wx:for-index="i">
+    <input placeholder-class="mplacehodlerClass" data-id="{{i}}" placeholder="请输入防窜码" value="{{item}}" bindinput="getInp" bindblur="getBlur"/>
+    <view class="s-code-scan" data-id="{{i}}" bindtap="scanShop">
+      <van-icon name="scan" size="20px" color="#fff" />
+      <span>扫码识别</span>
+    </view>
+    
+    <view class="s-code-del">
+      <van-icon name="delete-o" size="25px" color="red"  bindtap="delCode" data-id="{{i}}"/>
+    </view>
+   
+  </view>
+
+  <view class="s-code-add-btn" bindtap="addScanShop">
+
+    <van-icon name="plus" size="16px" color="#e55530"/>
+    添加防窜码
+  </view>
+  <!-- <view class="s-code-submit" bindtap="submit" >提交</view> -->
+  <button class="s-code-submit"  bindtap="submit" disabled="{{loadingFlg}}" >提交</button>
+  <span class="s-code-smark" wx:if="{{s_result_show}}">{{s_result}}</span>
+  <van-dialog id="van-dialog" />
+</view>
+
+
+
+
+<!-- 管理员的代办 -->
+<view class="container a-bg" wx:if="{{role_Id==1}}">
+  <view class="a-task">
+  <view class="a-task-content" bindtap="toMsg">
+    <image src="../../assets/images/xiaoxi.png"></image>
+    <span>消息</span>
+  </view>
+  <view class="a-task-content" bindtap="toAudit">
+    <image src="../../assets/images/examine.png"></image>
+    <span>审核</span>
+  </view>
+</view>
+</view>

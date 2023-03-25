@@ -1,0 +1,44 @@
+<cover-view class="date-selectBlack">
+    <cover-view class="selTime {{selectIdx==1?'active':''}}" bindtap="getSelect1">昨日</cover-view>
+    <cover-view class="selTime {{selectIdx==2?'active':''}}" bindtap="getSelect2">今天</cover-view>
+    <cover-view class="selTime {{selectIdx==3?'active':''}}" bindtap="getSelect3">本月</cover-view>
+    <cover-view class="selTime {{selectIdx==4?'active':''}}" bindtap="getSelect4">上月</cover-view>
+    <cover-view class="selImgBox" bindtap="getDateSelect"> 
+    <cover-image class="selImg" src="../../assets/images/shaixuan-2.png"></cover-image>
+  </cover-view>
+  </cover-view>
+  <van-action-sheet show="{{ dateSelShow }}" title="日期选择" bind:close="onCloseDate">
+  <view class="dateBox">
+    <view style="display:flex;justify-content: space-around;">
+    <view class="selQuarterBox">
+      <view>{{selQuarter}}</view>
+      <van-icon name="arrow-down" bindtap="showQuarter"/>
+      <view wx:if="{{showQuarterFlg}}" class="selQuarterList">
+        <view bindtap="getQuarterIndex" data-qIdx="1">第一季度</view>
+        <view bindtap="getQuarterIndex" data-qIdx="2">第二季度</view>
+        <view bindtap="getQuarterIndex" data-qIdx="3">第三季度</view>
+        <view bindtap="getQuarterIndex" data-qIdx="4">第四季度</view>
+      </view>
+    </view>
+    <view class="selQuarterBox" bindtap="getWeekData">近7天</view>
+    </view>
+    <view style="display: flex;margin-top:40rpx;justify-content: space-between;padding:0px 25rpx">
+      <view class="selQuarterBox" >
+      <picker mode="date" value="{{sDate}}" bindchange="bindsDateChange">
+      <view class="picker">
+        <van-icon name="notes-o" size="35rpx" />
+         {{sDate}}
+      </view>
+      </picker>
+    </view>
+    <view class="selQuarterBox">
+      <picker mode="date" value="{{eDate}}" bindchange="bindeDateChange">
+      <view class="picker">
+        <van-icon name="notes-o" size="35rpx" />
+         {{eDate}}
+      </view>
+      </picker>
+    </view>
+    </view>
+  </view>
+</van-action-sheet>

@@ -1,0 +1,22 @@
+<!--pages/sales/goodsDetail/goodsDetail.wxml-->
+<view class="container sbg">
+  <view class="s-active-list-content">
+    <view class="s-list-title">
+      {{goodsDetail.title}}
+    </view>
+    <view class="s-line"></view>
+    <view class="s-activity-detail-img">
+      <image mode="scaleToFill" src="{{goodsDetail.picUrl}}">
+      </image>
+    </view>
+    <view class="s-activity-detail-text">
+      {{goodsDetail.describe}}
+    </view>
+  </view>
+  
+  <view class="s-activity-detail-btn" bindtap="toActivityPage">
+    确定
+  </view>
+  <view class="s-empty-box">
+  </view>
+</view>

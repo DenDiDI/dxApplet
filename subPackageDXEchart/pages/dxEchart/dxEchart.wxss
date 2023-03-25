@@ -1,0 +1,19 @@
+@import "../../../assets/css/common.wxss";
+@import "../../../assets/css/chart.wxss";
+.contanier{
+  padding-bottom: 120rpx;
+}
+page{
+  background-color: #2B2B31;
+}
+.dx-chart1{
+  height: 706rpx;
+}
+.dx-chart2{
+  width: 100%;
+  height: 700rpx;
+  margin: 0rpx auto;
+}
+.dx-chart2-content{
+  height: 780rpx !important;
+}

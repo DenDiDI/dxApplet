@@ -1,0 +1,34 @@
+/* custom-tab-bar/index.wxss */
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 126rpx;
+  display: flex;
+  /* z-index: 999999; */
+  display: flex;
+  align-items: center;
+}
+
+
+.tab-bar-item {
+  flex: 1;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tab-bar-item .cover-image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.tab-bar-item .cover-view {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+}
+

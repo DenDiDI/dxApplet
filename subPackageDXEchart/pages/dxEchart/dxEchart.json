@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "van-calendar":"@vant/weapp/calendar/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "ec-canvas": "../../../ec-canvas/ec-canvas",
+    "date-sel-temp":"../../../components/dateSelTmp/dateSelTemp"
+  },
+  "navigationBarTitleText": "动销率分析",
+  "navigationBarBackgroundColor": "#1d1e25",
+  "navigationBarTextStyle": "white"
+}

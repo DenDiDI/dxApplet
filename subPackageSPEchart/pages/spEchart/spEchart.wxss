@@ -1,0 +1,47 @@
+@import "../../../assets/css/common.wxss";
+@import "../../../assets/css/chart.wxss";
+.contanier{
+  box-sizing: border-box;
+  padding-bottom: 80rpx;
+  /* height: 100%; */
+}
+page{
+  background-color: #2B2B31;
+}
+.sp-chart{
+  height: 800rpx;
+  position: relative;
+}
+.sp-chart2-content{
+  height:860rpx;
+}
+.sp-saleAndScanSel{
+  width:200rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.sp-saleNum{
+  width:30rpx;
+  height:30rpx;
+  background-color: #458ef2;
+  border-radius: 50%;
+  margin-right:10rpx;
+}
+.sp-scanNum{
+  width:30rpx;
+  height:30rpx;
+  background-color: #61dfaf;
+  border-radius: 50%;
+  margin-right:10rpx;
+}
+.sp-chart1-btn{
+  width:100%;
+  position: absolute;
+  bottom: 10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+  font-size: 30rpx;
+}

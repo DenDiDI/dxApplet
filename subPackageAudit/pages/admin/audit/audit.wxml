@@ -1,0 +1,48 @@
+<!--pages/admin/audit/audit.wxml-->
+<view class="container">
+  <!-- 输入框 -->
+  <view class="msg-input">
+    <input type="value"/>
+    <image src="../../../assets/images/searchIcon.png"></image>
+  </view>
+  <!-- 审核选择 -->
+  <view class="a-audit-select-op">
+    <view class="a-audit-status-btn">
+      <view class="{{selectStatus==1?'a-audit-status-active':''}} a-audit-status a-audit-n-status" bindtap="getNAudit">未审核</view>
+      <view class="{{selectStatus==2?'a-audit-status-active':''}} a-audit-status a-audit-y-status" bindtap="getYAudit">已审核</view>
+    </view>
+    <view class="a-audit-multiple-btn">
+      <view>全选</view>
+      <view>批量审核</view>
+    </view>
+  </view>
+  <!-- 审核列表 -->
+  <view class="a-audit-list">
+
+    <checkbox wx:if="{{selectStatus==1}}"></checkbox>
+    <view class="a-audit-list-left">
+      <view class="a-audit-list-top">
+        <view class="a-audit-list-top-left">
+          <view class="a-audit-list-top-title">门店审核</view>
+          <span class="a-audit-no-status" wx:if="{{selectStatus==1}}">待审核</span>
+          <view wx:else>
+            <span wx:if="{{selectStatus==2}}" class="a-audit-agress-status">同意</span>
+            <span wx:else class="a-audit-no-agress-status">不同意</span>
+          </view>
+        </view>
+        <view class="a-audit-list-top-time">2022-01-12 12:12:12</view>
+      </view>
+      <view class="a-audit-list-top">
+        <!-- <view class="a-audit-list-top-left"> -->
+          <view class="a-audit-list-bottom-title">业务员：张三</view>
+        <!-- </view> -->
+        <view class="a-audit-list-top-time">
+          <van-icon name="arrow" />
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+ 
+</view>

@@ -1,0 +1,106 @@
+<!--pages/rankAndActive/rankAndActive.wxml-->
+<!-- 导购员的活动 -->
+<view wx:if="{{role_Id==3}}" class="container sbg">
+  <view class="s-active-list-content" wx:for="{{s_activity_list}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="s_getActiveDetail">
+    <view class="s-list-title">
+     {{item.title}}
+     <!-- {{item.describe}} -->
+    </view>
+    <view class="s-line"></view>
+    <view class="s-activity-list-img">
+      <image src="{{item.picUrl}}"></image>
+    </view>
+  </view>
+  <view class="bottomBox"></view>
+  <!-- <view class="s-active-list-content" bindtap="s_getActiveDetail">
+    <view class="s-list-title">
+     活动1：这个描述是自己写的
+    </view>
+    <view class="s-line"></view>
+    <view class="s-activity-list-img">
+      <image src="../../assets/img/微信图片_20221124141855.png"></image>
+    </view>
+  </view> -->
+  
+</view>
+
+
+
+<!-- 业务员的龙虎榜 -->
+<view wx:if="{{role_Id==2}}" class="b-container-bg">
+  <view class="date-select">
+    <view class="{{selectIdx==1?'active':''}}" bindtap="getSelect1">日榜</view>
+    <view class="{{selectIdx==2?'active':''}}" bindtap="getSelect2">周榜</view>
+    <view class="{{selectIdx==3?'active':''}}" bindtap="getSelect3">月榜</view>
+    <image bindtap="b_showRankType" src="../../assets/images/shuaixuanBlack.png"></image>
+  </view>
+  
+  <!-- 头像排行榜 -->
+  <view class="b-top3-rank">
+    <view class="b-top3-rank-2 b-top-bg">
+      <view class="b-top3-rank-image">
+        <image src="../../assets/images/tx1.png"></image>
+      </view>
+      <image class="top2Img" src="../../assets/images/top2.png">
+      </image>
+      <view class="b-top3-rank-msg-name" style="padding:5px">{{b_rankDataArr[1].bmName}}</view>
+      <view class="b-top3-rank-msg-num">{{b_rankDataArr[1].tvalue}}</view>
+      <view class="b-top3-rank-msg-status"  wx:if="{{b_rankDataArr[1]}}">{{rankId==0?'人':rankId==1?'家':rankId==4?'元':'个'}}</view>
+      <vew class="b-top3-rank-msg-status" wx:else>暂无数据</vew>
+    </view>
+    <view class="b-top3-rank-1 b-top-bg">
+      <view class="b-top3-rank-image">
+        <image src="../../assets/images/tx1.png"></image>
+      </view>
+      <image class="top1Img" src="../../assets/images/top1.png">
+      </image>
+      <view class="b-top3-rank-msg-name" style="padding:5px">{{b_rankDataArr[0].bmName}}</view>
+      <view class="b-top3-rank-msg-num">{{b_rankDataArr[0].tvalue}}</view>
+      <view class="b-top3-rank-msg-status" wx:if="{{b_rankDataArr[0]}}">{{rankId==0?'人':rankId==1?'家':rankId==4?'元':'个'}}</view>
+      <vew class="b-top3-rank-msg-status" wx:else>暂无数据</vew>
+    </view>
+    <view class="b-top3-rank-3 b-top-bg">
+      <view class="b-top3-rank-image">
+        <image src="../../assets/images/tx1.png"></image>
+      </view>
+      <image class="top2Img" src="../../assets/images/top3.png">
+      </image>
+      <view class="b-top3-rank-msg-name">{{b_rankDataArr[2].bmName}}</view>
+      <view class="b-top3-rank-msg-num">{{b_rankDataArr[2].tvalue}}</view>
+      <view class="b-top3-rank-msg-status" wx:if="{{b_rankDataArr[2]}}">{{rankId==0?'人':rankId==1?'家':rankId==4?'元':'个'}}</view>
+      <vew class="b-top3-rank-msg-status" wx:else>暂无数据</vew>
+    </view>
+  </view>
+
+  <!-- 非前三的排行版 -->
+  <view class="b-rank-list" wx:if="{{b_rankNoTopArr.length!=0}}"> 
+    <view class="b-rank-list-item" wx:for="{{b_rankNoTopArr}}" wx:for-index="i" wx:key="i">
+      <view class="b-rank-list-item-msg" style="width: 100%;display: flex;">
+      <view style="width:15%;text-align: center;font-size:32rpx">{{i+4}}</view>
+      <view style="font-size:32rpx;width:90%;display:flex;justify-content: space-between;">
+      <view>{{item.bmName}}</view>
+        <view class="red" wx:if="{{rankId==0}}">{{item.tvalue}}<text style="color:#000;margin-left:10rpx">人</text></view>
+        <view class="red" wx:if="{{rankId==1}}">{{item.tvalue}}<text style="color:#000;margin-left:10rpx">家</text></view>
+        <view class="red" wx:if="{{rankId==2||rankId==3}}">{{item.tvalue}}<text style="color:#000;margin-left:10rpx">个</text></view>
+        <view class="red" wx:if="{{rankId==4}}">{{item.tvalue}}<text style="color:#000;margin-left:10rpx">元</text></view>
+      </view>
+      </view>
+   
+      <view>
+        
+      </view>
+    </view>
+  </view>
+  <view class="b-rank-list-center" wx:else>
+    暂无更多数据
+  </view>
+  <van-popup show="{{ b_rankTypeShow }}"  round  position="bottom">
+   <view class="b-rank-select-type" wx:for="{{b_rankTypeArr}}" wx:for-index="index" wx:key="index">
+    <view id="{{index}}" bindtap="b_getRankType">{{item}}</view>
+   </view>
+   <view style="height:20rpx;width:100%;background-color:#F8F8F8"></view>
+    <view bindtap="b_getRankTypeCancel" class="b-rank-select-type-cancel">取消</view>
+  </van-popup>
+  
+  <view class="bottom-box"></view>
+</view>

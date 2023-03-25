@@ -1,0 +1,71 @@
+<view class="container">
+<!-- 提现栏 -->
+  <view class="s-code-cash-content"> 
+    <view class="s-code-cash-money">
+      {{money}}元
+    </view>
+    <span>可提现金额</span>
+    <view class="s-code-cash-btn-box">
+     <view class="s-code-cash-btn" bindtap="toCash">去提现</view>
+    </view>
+  </view>
+  <!-- 审核通过栏 -->
+  <view class="list-content sbgColor" wx:for="{{s_code_data}}" wx:for-index="i">
+    <view class="list-title sfontColor s-title">
+    <view style="font-weight: 800;"> 
+      <span wx:if="{{item.approvalStatus==2}}">审核通过</span>
+      <span wx:if="{{item.approvalStatus==3}}" class="red">审核未通过</span>
+      <span wx:if="{{item.approvalStatus==1}}">审核中</span>
+   
+    </view>
+      <view class="s-time">{{item.createTime}}</view>
+    </view>
+    <view class="sline"></view>
+    <view class="s-code-list-item">
+      <!-- <view class="s-code-list-items sfontColor">
+        <span class="sfontColor">防窜码</span>
+        <view>{{item.antiCodes}}</view>
+      </view> -->
+      <!-- <view class="s-code-list-items sfontColor">
+        <span class="sfontColor">商品名称</span>
+        <view>{{item.goodsbaseNames}}</view>
+      </view> -->
+      <view class="s-code-list-items sfontColor">
+        <span class="sfontColor">奖励金额</span>
+        <view class="s-nowrap">{{item.approvalStatus==3?0:item.rewardMoney}}元</view>
+      </view>
+      <view class="s-code-list-items s-ceode-d sfontColor" bindtap="sCheckDetail" data-id="{{i}}"> 
+        <span class="sfontColor" >扫码详情</span>
+        <van-icon wx:if="{{item.sdownIndex}}" name="arrow-down" />
+        <van-icon wx:else name="arrow-up" />
+      </view>
+      <view wx:if="{{item.sdownIndex}}">
+        <view class="s-scanCode-detail">
+          <view wx:for="{{item.antiCodesDetail}}" wx:for-item="items" wx:for-index="i" class="s-detail-box">
+            <view class="s-code-list-items sfontColor">
+              <span class="sfontColor">防窜码</span>
+              <view>{{items.antiCodes}}</view>
+            </view>
+            <view class="s-code-list-items sfontColor">
+              <span class="sfontColor">商品名称</span>
+              <view>{{items.goodsBaseNames}}</view>
+            </view>
+            <view class="s-code-list-items sfontColor">
+              <span class="sfontColor">奖励金额</span>
+              <view>{{items.reward}}元</view>
+            </view>
+            <view class="s-code-list-items sfontColor">
+              <span class="sfontColor">扫码状态</span>
+              <view>{{(items.scancodeStatus==-2&&item.approvalStatus==3||items.scancodeStatus==-5&&item.approvalStatus==3||items.scancodeStatus==-8&&item.approvalStatus==3)?"疑似窜货":(items.scancodeStatus==-3&&item.approvalStatus==3)?"此码被占用":(items.scancodeStatus==-6&&item.approvalStatus==3||items.scancodeStatus==-7&&item.approvalStatus==3||items.scancodeStatus==-9&&item.approvalStatus==3)?"未匹配政策":(items.scancodeStatus==-4&&item.approvalStatus==3)?"提交未被领取":(items.scancodeStatus==0&&item.approvalStatus==3)?"审核不通过":item.approvalStatus==1?"正在审核":"领取成功"}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{item.approvalStatus==3}}" class="s-code-list-items sfontColor">
+       <view class="s-edit" bindtap="sEdit" data-id="{{i}}">修改</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+

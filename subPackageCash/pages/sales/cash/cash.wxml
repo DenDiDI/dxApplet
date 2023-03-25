@@ -1,0 +1,15 @@
+<!--pages/sales/cash/cash.wxml-->
+<view class="container cashPage">
+  <view class="s-code-cash-content"> 
+    <view class="s-code-cash-money">
+      ￥{{money}}元
+    </view>
+    <span>可提现金额</span>
+  </view>
+  <view class="s-code-cash-input">
+    <input type="value" placeholder-class="m0placehodlerClass" style="width:500rpx" placeholder="请输入提现金额" value="{{inpMoney}}" bindinput="getInpMoney"/>
+    <button class="s-code-cash-input-btn" bindtap="getCash" disabled="{{loadingFlg}}" >提现</button>
+    <!-- <view class="s-code-cash-input-btn" bindtap="getCash">提现</view> -->
+  </view>
+  
+</view>

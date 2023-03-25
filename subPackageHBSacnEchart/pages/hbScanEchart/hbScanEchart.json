@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-calendar":"@vant/weapp/calendar/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-search": "@vant/weapp/search/index",
+    "ec-canvas": "../../../ec-canvas/ec-canvas",
+    "date-sel-temp":"../../../components/dateSelTmp/dateSelTemp"
+  },
+  "navigationBarBackgroundColor": "#1d1e25",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "扫码金额分析"
+}

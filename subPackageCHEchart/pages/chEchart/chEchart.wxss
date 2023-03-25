@@ -1,0 +1,22 @@
+@import "../../../assets/css/common.wxss";
+@import "../../../assets/css/chart.wxss";
+.contanier{
+  box-sizing: border-box;
+  padding-bottom: 80rpx;
+  /* height: 100%; */
+}
+page{
+  background-color: #2B2B31;
+}
+.ch-text{
+  margin-top: 120rpx;
+  padding-left:40rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+.ch-chart{
+  height: 546rpx;
+}
+.ch-chart2{
+  height: 700rpx;
+}

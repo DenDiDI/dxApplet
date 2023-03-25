@@ -1,0 +1,386 @@
+.van-dropdown-menu {
+  background-color: transparent !important;
+  height: 80rpx !important;
+
+}
+.van-ellipsis{
+  color: #fff !important;
+  font-size: 34rpx !important;
+  width: 120rpx !important;
+}
+.van-dropdown-menu__title--active {
+  color: #fff !important;
+}
+.van-dropdown-item {
+  left: 35rpx !important;
+  right: 35rpx !important;
+}
+.van-overlay {
+  background-color: transparent;
+}
+.mplacehodlerClass{
+  color:#000;
+  opacity: 0.8;
+  letter-spacing: 4rpx;
+}
+.m0placehodlerClass{
+  color:#000;
+  opacity: 0.8;
+  letter-spacing: 4rpx;
+}
+/* 双图表 */
+.chart-content{
+  width: 686rpx;
+  /* height: 786rpx; */
+  background: #1D1E25;
+  border-radius: 12rpx;
+  margin: 120rpx auto 0rpx;
+  display: flex;
+  flex-direction: column;
+}
+/* 单图表 */
+.chart2-content{
+  width: 686rpx;
+  /* height: 500px; */
+  background: #1D1E25;
+  margin: 20rpx auto;
+  border-radius: 12rpx;
+  display: flex;
+  flex-direction: column;
+}
+/* 表格头部标题 */
+/* .chart-header{
+  height:80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left:20rpx;
+  line-height: 80rpx;
+  color: #FFF;
+  font-size: 30rpx;
+  box-shadow: inset 0px -1px 0px 0px rgba(225,225,225,0.1);
+} */
+/* .chart2-header{
+  display: flex;
+  padding-right:20rpx;
+  justify-content: space-between;
+} */
+
+.barChart{
+  width: 686rpx;
+  /* height: 700rpx; */
+  padding: 20rpx;
+  box-sizing: border-box;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
+}
+.noDataTxt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+  font-size: 30rpx;
+}
+/* 双表的无数据 */
+.chart{
+  width: 49%;
+  height:100%;
+}
+/* 单表的无数据 */
+.chart2{
+  width: 100%;
+  height:100%;
+}
+input{
+  margin-top:4rpx;
+  width: 622rpx;
+  height: 100rpx;
+  font-size: 32rpx;
+  box-shadow: inset 0px -1px 0px 0px rgba(225,225,225,0.5);
+  font-family: PingFangSC-Regular, PingFang SC;
+  color:#000;
+}
+
+.cellRight{
+  width:622rpx;
+  height:100rpx;
+  position: relative;
+  line-height: 100rpx;
+}
+
+.cellRightSpan{
+  width:150rpx;
+  height:100rpx;
+  position: absolute;
+  top:0rpx;
+  right:0rpx;
+  color:#fff;
+  opacity: 0.8;
+  letter-spacing: 1rpx;
+  /* z-index:99; */
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  text-align: right;
+  /* display: flex;
+  align-items: center; */
+}
+
+.red{
+  color: red !important;
+}
+.bgRed{
+  color: #fff !important;
+  background-color: red !important;
+  border: 2rpx solid red !important;
+  letter-spacing: 2rpx;
+}
+.active{
+  color: #007BFF !important;
+}
+/* 线 */
+.line{
+  width:646rpx;
+  height:2rpx;
+  background-color:  #2B2B31;
+  /* margin: 0rpx 20rpx; */
+}
+.list-content{
+  margin-top: 20rpx; 
+  width: 686rpx;
+  border-radius: 12rpx;
+  background-color: #1D1E25;
+  display:flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding:20rpx;
+  margin:20rpx auto;
+}
+.list-title{
+  color: #fff;
+  opacity: 0.8;
+  font-size: 24rpx;
+  height:92rpx;
+  line-height: 92rpx;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+}
+/* 下拉选择 */
+.select-box{
+  position: relative;
+  width: 620rpx;
+}
+.select{
+  color:#000;
+  font-size:32rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  opacity: 0.8;
+  font-family: PingFangSC-Regular, PingFang SC;
+  letter-spacing: 4rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-right: 40rpx;
+}
+.select-box-span{
+  position:absolute;
+  top:20rpx;
+  /* color: #FFF; */
+  opacity: 0.8;
+  right:0rpx;
+}
+/* 选择搜索框 */
+.msg-input{
+  width:  100%;
+  height: 100rpx;
+  margin-top: 1rpx;
+  background: #1D1E25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.msg-input input{
+  width: 690rpx;
+  height: 64rpx;
+  background: #2B2B31;
+  border-radius: 32rpx;
+  font-size: 32rpx;
+  border: 2rpx solid #979797;
+  position: relative;
+  padding-left: 80rpx;
+  line-height: 64rpx;
+  color: #131415;
+  box-sizing: border-box;
+}
+.msg-input image{
+  width: 42rpx;
+  height:44rpx;
+  position: absolute;
+  left: 50rpx;
+}
+
+checkbox {
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  margin-right:20rpx;
+  position:relative;
+  margin-left:10rpx;
+}
+ /* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 1px solid #999;
+  
+}
+/* 选中后的 背景样式*/
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border: 1rpx solid #007BFF;
+  background: #007BFF;
+}
+/* 选中后的 对勾样式 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color:#fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+}
+/* 日期筛选 */
+.date-select{
+  height: 100rpx;
+  width: 750rpx;
+  background: #FFFFFF;
+  top: 0rpx;
+  box-shadow:inset 0px 1rpx 0px 0px rgba(225,225,225,0.2); 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  position: fixed;
+  z-index: 99;
+}
+.dateBox{
+  margin-top:60rpx;
+  display:flex;
+  flex-direction: column;
+  height:1200rpx;
+}
+.selQuarterBox{
+  width:282rpx;
+  height:60rpx;background:#F5F5F5;
+  line-height:60rpx;
+  font-size: 28rpx;
+  display:flex;
+  justify-content: space-between;
+  position: relative;padding:0px 20rpx
+}
+.selQuarterList{
+  z-index:99;
+  border:1px solid rgba(225,225,225,0.5);
+  background-color:#fff;
+  position:absolute;
+  top:60rpx;
+  left:0px;
+  width:100%;
+  height:280rpx;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left:40rpx;
+  box-sizing: border-box;
+}
+.date-selectBlack{
+  height: 100rpx;
+  width: 750rpx;
+  background: #1d1e25;
+  color:#fff;
+  top: 0rpx;
+  box-shadow:inset 0px 1rpx 0px 0px rgba(225,225,225,0.2); 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  position: fixed;
+  z-index: 99;
+}
+.date-selectBlack view{
+  flex: 1;
+  text-align:center;
+  color: #fff;
+  opacity: 0.9;
+}
+.date-select view{
+  flex: 1;
+  text-align:center;
+  color: #000;
+  opacity: 0.9;
+}
+.date-selectBlack image{
+  width: 36rpx;
+  height: 40rpx;
+  color: #fff;
+  padding-right: 20rpx;
+  opacity: 0.9;
+}
+.date-select image{
+  width: 36rpx;
+  height: 40rpx;
+  padding-right: 20rpx;
+  opacity: 0.9;
+}
+/* 底部支撑 */
+.bottom-box{
+  height: 110rpx;
+  width: 100%;
+}
+.selImgBox{
+  width: 10%;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index:999;
+}
+.selTime{
+  width:20%;
+  text-align: center;
+}
+.selImg{
+  width:40rpx;
+  height:40rpx;
+  z-index:999;
+}
+.s-code-cash-input-btn{
+  position: absolute;
+  top:2rpx;
+  right:8rpx;
+  z-index:99;
+  width: 176rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  color: #fff !important;
+  letter-spacing: 4rpx;
+  font-size: 32rpx;
+  opacity: 0.9;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  background: #007DFF !important;
+  border-radius: 8rpx; 
+}
+.selbanner{
+  margin-top: 100rpx;
+  width:750rpx;
+  height:1624rpx;
+}
+.selbannerBox{
+  display:flex;
+  justify-content: space-around;
+  padding:20rpx;
+}
